@@ -1,0 +1,150 @@
+<!--<div class="p-3">-->
+<!--  <div class="card">-->
+<!--    <div class="card-body">-->
+<!--      <table *ngIf="activities" class="table">-->
+<!--        <thead>-->
+<!--        <tr>-->
+<!--          <th>id</th>-->
+<!--          <th>name</th>-->
+<!--          <th>about</th>-->
+<!--          <th>price</th>-->
+<!--          <th>duration</th>-->
+<!--          <th>agencyId</th>-->
+<!--          <th>createdDate</th>-->
+<!--        </tr>-->
+<!--        </thead>-->
+<!--        <tbody>-->
+<!--        <tr *ngFor="let a of activities">-->
+<!--          <td>{{a.id}}</td>-->
+<!--          <td>{{a.name}}</td>-->
+<!--          <td>{{a.about}}</td>-->
+<!--          <td>{{a.price}}</td>-->
+<!--          <td>{{a.duration}}</td>-->
+<!--          <td>{{a.agencyId}}</td>-->
+<!--          <td>{{a.createdDate}}</td>-->
+<!--        </tr>-->
+<!--        </tbody>-->
+<!--      </table>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<div class="container">
+  <div>
+    <div class="alert alert-danger alert-dismissible fade show my-4"  role="alert" >
+      <strong>Error!</strong>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  </div>
+  <div class="card shadow my-4">
+    <div class="card-header py-3 bg-dark d-flex align-items-center justify-content-between">
+      <h6 class="m-0 fw-bold text-light">Activities</h6>
+      <button type="button" class="btn btn-primary fw-bold" data-bs-toggle="modal" data-bs-target="#competitionModal">
+        Create Activity
+      </button>
+    </div>
+    <div class="card-body">
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead class="thead-dark">
+          <tr>
+            <th class="text-center">Name</th>
+            <th class="text-center">About</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Price</th>
+            <th class="text-center">Duration</th>
+            <th class="text-center">Agency</th>
+            <th class="text-center">Action</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td>
+              <div class="d-flex align-items-center">
+                <img src="https://www.marrakech-desert-trips.com/wp-content/uploads/2023/07/Marrakech-camel-trek-1.jpg" alt="" style="width: 45px; height: 45px" class="rounded-circle">
+                <div class="ms-3">
+                  <p class="mb-1"><span class="fw-bold">Camel Riding</span></p>
+                </div>
+              </div>
+            </td>
+            <td class="text-center align-content-center">
+              <p class="fw-normal mb-0">Sahara Trip</p>
+            </td>
+            <td class="text-center align-content-center">
+              <p class="fw-normal mb-0">Fun Activity</p>
+            </td>
+            <td class="text-center align-content-center">
+              <p class="fw-normal mb-0">300MAD</p>
+            </td>
+            <td class="text-center align-content-center">
+              <p class="fw-normal mb-0">3 DAYS</p>
+            </td>
+            <td class="text-center align-content-center">
+              <p class="fw-normal mb-0">TOURMARRA</p>
+            </td>
+            <td class="d-flex justify-content-around align-items-center p-3">
+              <button type="button" class="btn btn-danger">Delete</button>
+              <button type="button" class="btn btn-warning">Update</button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="competitionModal" tabindex="-1" aria-labelledby="competitionModal" aria-hidden="true">
+
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Activity Modal</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form >
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="location-input">Location</label>
+                <input type="text" name="location" class="form-control" id="location-input">
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="amount-inputZip">Amount</label>
+                <input type="number"  name="amount" class="form-control" id="amount-inputZip">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="mb-3">
+              <label for="amount-inputZip">Number of Participants</label>
+              <input type="number"   name="numberOfParticipants" class="form-control" id="number-of-participants">
+            </div>
+          </div>
+          <div class="row">
+            <div class="mb-3">
+              <label for="Date-input">Competition date </label>
+              <input type="date"name="date" class="form-control" id="Date-input" />
+            </div>
+            <div class="mb-3">
+              <label for="start-time-inputCity">Start Time</label>
+              <input type="time"  name="startTime" class="form-control" id="start-time-inputCity">
+            </div>
+            <div class="mb-3">
+              <label for="end-time-inputState">End Time</label>
+              <input type="time"  name="endTime" id="end-time-inputState" class="form-control"/>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Save</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
